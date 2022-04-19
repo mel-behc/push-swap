@@ -8,4 +8,4 @@ long read_args(char *arg)
     if (number > 2147483647 || number < -2147483648)
         error_function();
     return number;
-}    
+} 

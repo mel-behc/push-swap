@@ -3,10 +3,14 @@ CFLAGS = -Wall -Werror -Wextra
 PROGRAM = push-swap
 HEADER = push-swap.h
 SRC = push-swap.c \
-		ft_atol.c \
+		additional_functions.c \
 		check_args.c \
-		error_function.c \
-		read_args.c
+		read_args.c \
+		list_creation.c \
+		print_list.c \
+		push_instractions.c \
+		rotate_instractions.c \
+		sort_three_nbrs.c
 
 OBJ = $(SRC:.c=.o)
 

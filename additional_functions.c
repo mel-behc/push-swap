@@ -24,3 +24,21 @@ long	ft_atol(const char *str)
 	}
 	return (f * signe);
 }
+
+void error_function()
+{
+    ft_putstr("Error\n");
+    exit (0);
+}
+
+void    ft_putstr(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
+}
