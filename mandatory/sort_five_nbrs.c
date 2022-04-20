@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_index.c                                       :+:      :+:    :+:   */
+/*   sort_five_nbrs.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/20 01:34:14 by mel-behc          #+#    #+#             */
-/*   Updated: 2022/04/20 01:34:26 by mel-behc         ###   ########.fr       */
+/*   Created: 2022/04/20 01:50:55 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 01:51:52 by mel-behc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_index(t_node *list, int nbr)
+
+
+void	sort_five_nbrs(t_node **stack_a, int *count)
 {
-	t_node	*tmp;
+	t_node	*stack_b;
 	int		i;
 
-	tmp = list;
+	stack_b = NULL;
 	i = 0;
-	while (tmp->next)
+	while (i < 2)
 	{
-		if (tmp->nbr == nbr)
-			break ;
-		else
-			i++;
-		tmp = tmp->next;
+		putnbr_intop(stack_a, count);
+		push_b(stack_a, &stack_b);
+		i++;
 	}
-	return (i);
+	sort_three_nbrs(stack_a, count);
+	push_a(stack_a, &stack_b);
+	push_a(stack_a, &stack_b);
 }

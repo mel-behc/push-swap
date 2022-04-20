@@ -31,6 +31,8 @@ static void	non_numeric_args(char *arg)
 			error_function();
 		else if ((arg[0] != '-' && !ft_isdigit(arg[0])) || i > 10)
 			error_function();
+		else if (!ft_isdigit(arg[i]))
+			error_function();
 		i++;
 	}
 }

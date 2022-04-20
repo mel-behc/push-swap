@@ -50,5 +50,38 @@ void	delete_node(t_node **list)
 	tmp = *list;
 	*list = (*list)->next;
 	free(tmp);
-	tmp = NULL;
+	// tmp = NULL;
+}
+
+int	count_list(t_node **head)
+{
+	t_node	*ptr;
+	int		i;
+
+	ptr = *head;
+	i = 0;
+	while (ptr)
+	{
+		i++;
+		ptr = ptr->next;
+	}
+	return (i);
+}
+
+int	find_index(t_node *list, int nbr)
+{
+	t_node	*tmp;
+	int		i;
+
+	tmp = list;
+	i = 0;
+	while (tmp->next)
+	{
+		if (tmp->nbr == nbr)
+			break ;
+		else
+			i++;
+		tmp = tmp->next;
+	}
+	return (i);
 }
