@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 PROGRAM = push-swap
-HEADER = push-swap.h
+HEADER = push_swap.h
 SRC = push-swap.c \
 		additional_functions.c \
 		check_args.c \
@@ -10,7 +10,9 @@ SRC = push-swap.c \
 		print_list.c \
 		push_instractions.c \
 		rotate_instractions.c \
-		sort_three_nbrs.c
+		find_index.c \
+		sort_three_nbrs.c \
+		sort_five_nbrs.c
 
 OBJ = $(SRC:.c=.o)
 

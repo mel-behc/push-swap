@@ -1,4 +1,16 @@
-#include "push-swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   additional_functions.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 01:31:21 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 01:32:49 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 long	ft_atol(const char *str)
 {
@@ -25,20 +37,20 @@ long	ft_atol(const char *str)
 	return (f * signe);
 }
 
-void error_function()
+void	error_function(void)
 {
-    ft_putstr("Error\n");
-    exit (0);
+	ft_putstr("Error\n");
+	exit (0);
 }
 
-void    ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }

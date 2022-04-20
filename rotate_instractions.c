@@ -1,6 +1,18 @@
-#include "push-swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate_instractions.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 01:50:39 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 01:50:50 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	reverse_rotate_a(t_node **list, int count)
+#include "push_swap.h"
+
+void	reverse_rotate_a(t_node **list, int *count)
 {
 	t_node	*tmp;
 	t_node	*ptr;
@@ -13,17 +25,17 @@ void	reverse_rotate_a(t_node **list, int count)
 		tmp = tmp->next;
 	*list = tmp;
 	tmp->next = ptr;
-	while (i < count)
+	while (i < *count)
 	{
 		i++;
 		tmp = tmp->next;
-		if (i == count - 1)
+		if (i == *count - 1)
 			tmp->next = NULL;
 	}
 	ft_putstr("rra\n");
 }
 
-void	reverse_rotate_b(t_node **list, int count)
+void	reverse_rotate_b(t_node **list, int *count)
 {
 	t_node	*tmp;
 	t_node	*ptr;
@@ -36,11 +48,11 @@ void	reverse_rotate_b(t_node **list, int count)
 		tmp = tmp->next;
 	*list = tmp;
 	tmp->next = ptr;
-	while (i < count)
+	while (i < *count)
 	{
 		i++;
 		tmp = tmp->next;
-		if (i == count - 1)
+		if (i == *count - 1)
 			tmp->next = NULL;
 	}
 	ft_putstr("rrb\n");

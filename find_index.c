@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_args.c                                        :+:      :+:    :+:   */
+/*   find_index.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/20 01:49:08 by mel-behc          #+#    #+#             */
-/*   Updated: 2022/04/20 01:50:33 by mel-behc         ###   ########.fr       */
+/*   Created: 2022/04/20 01:34:14 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 01:34:26 by mel-behc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	read_args(char *arg)
+int	find_index(t_node *list, int nbr)
 {
-	long	number;
+	t_node	*tmp;
+	int		i;
 
-	number = ft_atol(arg);
-	if (number > 2147483647 || number < -2147483648)
-		error_function();
-	return (number);
+	tmp = list;
+	i = 0;
+	while (tmp->next)
+	{
+		if (tmp->nbr == nbr)
+			break ;
+		else
+			i++;
+		tmp = tmp->next;
+	}
+	return (i);
 }

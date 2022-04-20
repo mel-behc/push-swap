@@ -1,4 +1,4 @@
-#include "push-swap.h"
+#include "push_swap.h"
 
 void print_list(t_node *ptr)
 {

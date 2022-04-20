@@ -1,29 +1,41 @@
-#include "push-swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list_creation.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 01:34:48 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 01:37:46 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    insert_at_end(t_node **list, int nbr)
+#include "push_swap.h"
+
+void	insert_at_end(t_node **list, int nbr)
 {
-    t_node    *tmp;
-    t_node    *new_node;
+	t_node	*tmp;
+	t_node	*new_node;
 
-    tmp = *list; 
-    new_node = (t_node *)malloc(sizeof(t_node));
-    if (!new_node)
-        return ;
-    new_node->nbr = nbr;
-    new_node->next = NULL;
-    if (*list == NULL)
-        *list = new_node;
-    else
-    {
-        while (tmp && tmp->next)
-            tmp = tmp->next;
-        tmp->next = new_node;
-    }
+	tmp = *list;
+	new_node = (t_node *)malloc(sizeof(t_node));
+	if (!new_node)
+		return ;
+	new_node->nbr = nbr;
+	new_node->next = NULL;
+	if (*list == NULL)
+		*list = new_node;
+	else
+	{
+		while (tmp && tmp->next)
+			tmp = tmp->next;
+		tmp->next = new_node;
+	}
 }
 
-void    insert_at_top(t_node **list, int nbr)
+void	insert_at_top(t_node **list, int nbr)
 {
-    t_node	*tmp;
+	t_node	*tmp;
 
 	tmp = (t_node *)malloc(sizeof(t_node));
 	tmp->nbr = nbr;
@@ -31,12 +43,12 @@ void    insert_at_top(t_node **list, int nbr)
 	*list = tmp;
 }
 
-void    delete_node(t_node  **list)
+void	delete_node(t_node **list)
 {
-    t_node  *tmp;
+	t_node	*tmp;
 
-    tmp = *list;
-    *list = (*list)->next;
-    free(tmp);
-    tmp = NULL;
+	tmp = *list;
+	*list = (*list)->next;
+	free(tmp);
+	tmp = NULL;
 }

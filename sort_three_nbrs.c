@@ -1,4 +1,16 @@
-#include "push-swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_three_nbrs.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 01:52:00 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 01:52:11 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 static void	check_stack(t_node **stack)
 {
@@ -24,7 +36,7 @@ static void	check_stack(t_node **stack)
 	}
 }
 
-void	sort_three_nbrs(t_node **stack, int count)
+void	sort_three_nbrs(t_node **stack, int *count)
 {
 	t_node	*tmp;
 	t_node	*ptr;
