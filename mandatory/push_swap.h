@@ -6,7 +6,7 @@
 /*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:38:44 by mel-behc          #+#    #+#             */
-/*   Updated: 2022/04/20 01:46:36 by mel-behc         ###   ########.fr       */
+/*   Updated: 2022/04/20 23:33:29 by mel-behc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct t_data
 void	error_function(void);
 long	ft_atol(const char *str);
 void	ft_putstr(char *str);
-int	count_list(t_node **head);
+int		count_list(t_node **head);
 long	read_args(char *arg);
 int		*insert_tab(t_node *head, int *count);
 void	check_args(char **arg, int ac);
@@ -62,6 +62,5 @@ void	sort_three_nbrs(t_node **stack, int *count);
 void	sort_five_nbrs(t_node **stack_a, int *count);
 void	push_to_b(t_node **stack_a, t_node **stack_b, int *count, int devider);
 void	sort_hundred_nbr(t_node **stack_a, int *count);
-void	print_list(t_node *ptr);
 
 #endif

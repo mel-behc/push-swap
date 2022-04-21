@@ -6,7 +6,7 @@
 /*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:34:48 by mel-behc          #+#    #+#             */
-/*   Updated: 2022/04/20 01:37:46 by mel-behc         ###   ########.fr       */
+/*   Updated: 2022/04/20 23:32:01 by mel-behc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	delete_node(t_node **list)
 	tmp = *list;
 	*list = (*list)->next;
 	free(tmp);
-	// tmp = NULL;
 }
 
 int	count_list(t_node **head)

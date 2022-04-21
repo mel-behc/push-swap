@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_to_b.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 21:41:39 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 21:42:04 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	moove_nbr_ina(t_node **stack, int nbr)
@@ -30,14 +42,14 @@ static void	moove_nbr_inb(t_node **stack, int *tab, int index)
 	}
 }
 
-static void	rest_of_stack(t_node **stack_a, t_node **stack_b, int *count, int index)
+static void	rest_of_stack(t_node **stk_a, t_node **stk_b, int *count, int index)
 {
 	if (index < 5)
 	{
 		while (*count > 0)
 		{
-			putnbr_intop(stack_a, count);
-			push_b(stack_a, stack_b);
+			putnbr_intop(stk_a, count);
+			push_b(stk_a, stk_b);
 			*count -= 1;
 		}
 	}

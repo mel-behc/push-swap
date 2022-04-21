@@ -1,28 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   insert_tab.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 21:35:10 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 21:37:09 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	insertion_sort(int *tab, int len)
 {
-	t_data var;
-	int	j;
+	t_data	var;
+	int		j;
 
 	var.i = 1;
 	while (var.i < len)
 	{
 		var.number = tab[var.i];
 		j = var.i - 1;
-		while (j >= 0 && tab[j] >	var.number)
+		while (j >= 0 && tab[j] > var.number)
 		{
 			tab[j + 1] = tab[j];
 			j -= 1;
 		}
-		tab[j + 1] =	var.number;
+		tab[j + 1] = var.number;
 		var.i++;
 	}
 }
 
 int	*insert_tab(t_node *head, int *count)
 {
-	t_data var;
+	t_data	var;
 
 	var.i = 0;
 	var.tmp = head;

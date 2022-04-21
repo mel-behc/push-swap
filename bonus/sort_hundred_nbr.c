@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_hundred_nbr.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/20 21:43:27 by mel-behc          #+#    #+#             */
+/*   Updated: 2022/04/20 21:43:47 by mel-behc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	push_to_a(t_node **stack_a, t_node **stack_b, int *count, int index)
@@ -18,7 +30,6 @@ static void	push_to_a(t_node **stack_a, t_node **stack_b, int *count, int index)
 					reverse_rotate_b(stack_b, count);
 			}
 			push_a(stack_a, stack_b);
-			// free(*stack_a);
 			var.tmp = *stack_b;
 			*count -= 1;
 			index--;

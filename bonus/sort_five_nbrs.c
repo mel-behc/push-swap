@@ -6,13 +6,11 @@
 /*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:50:55 by mel-behc          #+#    #+#             */
-/*   Updated: 2022/04/20 01:51:52 by mel-behc         ###   ########.fr       */
+/*   Updated: 2022/04/20 21:43:14 by mel-behc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
 
 void	sort_five_nbrs(t_node **stack_a, int *count)
 {

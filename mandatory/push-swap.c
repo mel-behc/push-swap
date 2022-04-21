@@ -6,7 +6,7 @@
 /*   By: mel-behc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:37:58 by mel-behc          #+#    #+#             */
-/*   Updated: 2022/04/20 01:38:36 by mel-behc         ###   ########.fr       */
+/*   Updated: 2022/04/20 23:34:57 by mel-behc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static void	execute_instractions(t_node **stack, int *element_counter)
 		sort_three_nbrs(stack, element_counter);
 	else if (*element_counter == 5)
 		sort_five_nbrs(stack, element_counter);
-    else if (*element_counter == 100 || *element_counter == 500)
-        sort_hundred_nbr(stack, element_counter);
+	else if (*element_counter == 100 || *element_counter == 500)
+		sort_hundred_nbr(stack, element_counter);
 }
 
 int	main(int ac, char **av)

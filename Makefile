@@ -9,7 +9,6 @@ SRC = ./mandatory/push-swap.c \
 		./mandatory/check_args.c \
 		./mandatory/list_creation.c \
 		./mandatory/putnbr_intop.c \
-		./mandatory/print_list.c \
 		./mandatory/push_instractions.c \
 		./mandatory/rotate_instractions.c \
 		./mandatory/sort_three_nbrs.c \
@@ -23,7 +22,6 @@ SRC_B = ./bonus/my_checker.c \
 			./bonus/check_args.c \
 			./bonus/list_creation.c \
 			./bonus/putnbr_intop.c \
-			./bonus/print_list.c \
 			./bonus/push_instractions.c \
 			./bonus/rotate_instractions.c \
 			./bonus/sort_three_nbrs.c \
