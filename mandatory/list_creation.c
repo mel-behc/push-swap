@@ -50,6 +50,7 @@ void	delete_node(t_node **list)
 	tmp = *list;
 	*list = (*list)->next;
 	free(tmp);
+	tmp = NULL;
 }
 
 int	count_list(t_node **head)

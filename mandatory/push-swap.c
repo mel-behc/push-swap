@@ -12,14 +12,19 @@
 
 #include "push_swap.h"
 
-static void	execute_instractions(t_node **stack, int *element_counter)
+static int	execute_instractions(t_node **stack, int *element_counter)
 {
-	if (*element_counter == 3)
-		sort_three_nbrs(stack, element_counter);
-	else if (*element_counter == 5)
-		sort_five_nbrs(stack, element_counter);
-	else if (*element_counter == 100 || *element_counter == 500)
-		sort_hundred_nbr(stack, element_counter);
+	if (!sorted_stack(stack, element_counter))
+	{
+		if (*element_counter <= 3)
+			sort_three_nbrs(stack, element_counter);
+		else if (*element_counter <= 5)
+			sort_five_nbrs(stack, element_counter);
+		else if (*element_counter <= 100 || *element_counter >= 500)
+			sort_hundred_nbr(stack, element_counter);
+	}
+	return (0);
+	
 }
 
 int	main(int ac, char **av)

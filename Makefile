@@ -1,6 +1,6 @@
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
-PROGRAM = push-swap
+PROGRAM = push_swap
 CHECKER = checker
 HEADER = ./mandatory/push_swap.h
 HEADER_B = ./bonus/push_swap.h
@@ -15,7 +15,9 @@ SRC = ./mandatory/push-swap.c \
 		./mandatory/sort_five_nbrs.c \
 		./mandatory/push_to_b.c \
 		./mandatory/sort_hundred_nbr.c \
-		./mandatory/insert_tab.c
+		./mandatory/insert_tab.c \
+		./mandatory/sorted_stack.c
+
 
 SRC_B = ./bonus/my_checker.c \
 			./bonus/additional_functions.c \

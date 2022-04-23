@@ -58,6 +58,7 @@ void	rotate_a(t_node **list);
 void	rotate_b(t_node **list);
 void	swap_a(t_node **list);
 int		find_index(t_node *list, int nbr);
+int		sorted_stack(t_node **stack, int *count);
 void	sort_three_nbrs(t_node **stack, int *count);
 void	sort_five_nbrs(t_node **stack_a, int *count);
 void	push_to_b(t_node **stack_a, t_node **stack_b, int *count, int devider);

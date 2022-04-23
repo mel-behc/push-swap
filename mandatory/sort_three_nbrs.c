@@ -27,7 +27,9 @@ static void	check_stack(t_node **stack)
 		swap_a(stack);
 	else if ((tmp->nbr < (*stack)->nbr) && (tmp->nbr < ptr->nbr) \
 			&& ((*stack)->nbr > ptr->nbr))
+	{
 		rotate_a(stack);
+	}
 	else if ((tmp->nbr > (*stack)->nbr) && (tmp->nbr > ptr->nbr) \
 			&& ((*stack)->nbr < ptr->nbr))
 	{

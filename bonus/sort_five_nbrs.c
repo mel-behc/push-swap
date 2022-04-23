@@ -15,17 +15,17 @@
 void	sort_five_nbrs(t_node **stack_a, int *count)
 {
 	t_node	*stack_b;
-	int		i;
 
 	stack_b = NULL;
-	i = 0;
-	while (i < 2)
+	while (*count > 3)
 	{
 		putnbr_intop(stack_a, count);
 		push_b(stack_a, &stack_b);
-		i++;
+		*count -= 1;
 	}
-	sort_three_nbrs(stack_a, count);
+	if (!sorted_stack(stack_a, count))
+		sort_three_nbrs(stack_a, count);
 	push_a(stack_a, &stack_b);
 	push_a(stack_a, &stack_b);
+
 }

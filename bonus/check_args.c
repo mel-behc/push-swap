@@ -24,14 +24,12 @@ static void	non_numeric_args(char *arg)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	while (arg[i])
 	{
-		if ((arg[0] == '-' && !ft_isdigit(arg[i])) || i > 10)
-			error_function();
-		else if ((arg[0] != '-' && !ft_isdigit(arg[0])) || i > 10)
-			error_function();
-		else if (!ft_isdigit(arg[i]))
+		if (arg[0] == '-' && ft_isdigit(arg[i + 1]))
+			i++;
+		else if (!ft_isdigit(arg[i]) ||  i > 10)
 			error_function();
 		i++;
 	}
