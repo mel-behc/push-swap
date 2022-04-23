@@ -12,47 +12,45 @@
 
 #include "push_swap.h"
 
-void	reverse_rotate_a(t_node **list, int *count)
+void	reverse_rotate_a(t_node **list)
 {
-	t_node	*tmp;
-	t_node	*ptr;
-	int		i;
+	t_data	var;
 
-	tmp = *list;
-	ptr = *list;
-	i = 0;
-	while (tmp && tmp->next)
-		tmp = tmp->next;
-	*list = tmp;
-	tmp->next = ptr;
-	while (i < *count)
+	var.tmp = *list;
+	var.tmp2 = *list;
+	var.counter = count_list(list);
+	var.i = 0;
+	while (var.tmp && var.tmp->next)
+		var.tmp = var.tmp->next;
+	*list = var.tmp;
+	var.tmp->next = var.tmp2;
+	while (var.i < var.counter)
 	{
-		i++;
-		tmp = tmp->next;
-		if (i == *count - 1)
-			tmp->next = NULL;
+		var.i++;
+		var.tmp = var.tmp->next;
+		if (var.i == var.counter - 1)
+			var.tmp->next = NULL;
 	}
 }
 
-void	reverse_rotate_b(t_node **list, int *count)
+void	reverse_rotate_b(t_node **list)
 {
-	t_node	*tmp;
-	t_node	*ptr;
-	int		i;
+	t_data	var;
 
-	tmp = *list;
-	ptr = *list;
-	i = 0;
-	while (tmp && tmp->next)
-		tmp = tmp->next;
-	*list = tmp;
-	tmp->next = ptr;
-	while (i < *count)
+	var.tmp = *list;
+	var.tmp2 = *list;
+	var.counter = count_list(list);
+	var.i = 0;
+	while (var.tmp && var.tmp->next)
+		var.tmp = var.tmp->next;
+	*list = var.tmp;
+	var.tmp->next = var.tmp2;
+	while (var.i < var.counter)
 	{
-		i++;
-		tmp = tmp->next;
-		if (i == *count - 1)
-			tmp->next = NULL;
+		var.i++;
+		var.tmp = var.tmp->next;
+		if (var.i == var.counter - 1)
+			var.tmp->next = NULL;
 	}
 }
 

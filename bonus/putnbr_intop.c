@@ -49,7 +49,7 @@ void	putnbr_intop(t_node **stack, int *length)
 	{
 		if (var.i > (*length / 2))
 		{
-			reverse_rotate_a(stack, length);
+			reverse_rotate_a(stack);
 			var.i++;
 		}
 		else if (--var.i > -1)

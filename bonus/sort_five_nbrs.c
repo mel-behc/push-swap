@@ -24,7 +24,7 @@ void	sort_five_nbrs(t_node **stack_a, int *count)
 		*count -= 1;
 	}
 	if (!sorted_stack(stack_a, count))
-		sort_three_nbrs(stack_a, count);
+		sort_three_nbrs(stack_a);
 	push_a(stack_a, &stack_b);
 	push_a(stack_a, &stack_b);
 

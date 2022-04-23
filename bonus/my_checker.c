@@ -12,46 +12,56 @@
 
 #include "push_swap.h"
 
-static int	check_mooves(t_node **st_a, t_node **st_b, char *args, int *count)
+static int	check_mooves(t_node **st_a, t_node **st_b, char *args)
 {
-	if (!ft_strncmp("sa", args, 2))
+	// printf("I'm in check mooves\n");
+	// printf("the length of list == %d\n", *count);
+	if (!ft_strncmp("sa\n", args, 3))
 		swap_a(st_a);
-	else if (!ft_strncmp("ra", args, 2))
+	else if (!ft_strncmp("ra\n", args, 3))
 		rotate_a(st_a);
-	else if (!ft_strncmp("rb", args, 2))
-		rotate_b(st_a);
-	else if (!ft_strncmp("rra", args, 3))
-		reverse_rotate_a(st_a, count);
-	else if (!ft_strncmp("rrb", args, 3))
-		reverse_rotate_b(st_a, count);
-	else if (!ft_strncmp("pa", args, 2))
+	else if (!ft_strncmp("rb\n", args, 3))
+		rotate_b(st_b);
+	else if (!ft_strncmp("rra\n", args, 4))
+		reverse_rotate_a(st_a);
+	else if (!ft_strncmp("rrb\n", args, 4))
+		reverse_rotate_b(st_b);
+	else if (!ft_strncmp("pa\n", args, 3))
 	{
 		if (*st_b != NULL)
 			push_a(st_a, st_b);
 	}
-	else if (!ft_strncmp("pb", args, 2))
+	else if (!ft_strncmp("pb\n", args, 3))
 		push_b(st_a, st_b);
-	else if (!ft_strncmp("rrr", args, 3))
+	else if (!ft_strncmp("rrr\n", args, 4))
 		args = get_next_line(0);
-	else if (!ft_strncmp("sb", args, 2) || !ft_strncmp("ss", args, 2))
+	else if (!ft_strncmp("sb\n", args, 3) || !ft_strncmp("ss\n", args, 3))
 		args = get_next_line(0);
-	else if (!ft_strncmp("rr", args, 2))
+	else if (!ft_strncmp("rr\n", args, 3))
 		args = get_next_line(0);
-	free(args);
+	// free(args);
+	// printf("I'm out of check mooves by :)\n");
 	return (1);
 }
 
-static void	good_stack(t_node **stack, t_node **stack_b, int *length)
+static void	good_stack(t_node *stack, t_node *stack_b, int *length)
 {
 	t_data	var;
 
 	var.args = get_next_line(0);
 	while (var.args)
 	{
-		if (check_mooves(stack, stack_b, var.args, &var.counter))
+		// printf("Welcome to good stack\n");
+		// printf("var.args === %s\n", var.args);
+		if (check_mooves(&stack, &stack_b, var.args))
 			var.args = get_next_line(0);
+		// printf("I'm out of good stack by :)\n");
+		// else
+		// {
+		// 	break ;
+		// }
 	}
-	var.i = sorted_stack(stack, length);
+	var.i = sorted_stack(&stack, length);
 	if (var.i)
 		ft_putstr("OK\n");
 	else
@@ -77,9 +87,9 @@ int	main(int ac, char **av)
 			insert_at_end(&var.stack_a, var.number);
 			var.i++;
 		}
-		good_stack(&var.stack_a, &var.stack_b, &var.counter);
+		good_stack(var.stack_a, var.stack_b, &var.counter);
 	}
-	while (var.stack_a)
-		delete_node(&var.stack_a);
+	// while (var.stack_a)
+	// 	delete_node(&var.stack_a);
 	return (0);
 }

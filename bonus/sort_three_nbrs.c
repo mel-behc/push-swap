@@ -36,7 +36,7 @@ static void	check_stack(t_node **stack)
 	}
 }
 
-void	sort_three_nbrs(t_node **stack, int *count)
+void	sort_three_nbrs(t_node **stack)
 {
 	t_node	*tmp;
 	t_node	*ptr;
@@ -49,11 +49,11 @@ void	sort_three_nbrs(t_node **stack, int *count)
 	check_stack(stack);
 	if ((tmp->nbr > (*stack)->nbr) && (tmp->nbr > ptr->nbr) \
 			&& ((*stack)->nbr > ptr->nbr))
-		reverse_rotate_a(stack, count);
+		reverse_rotate_a(stack);
 	else if ((tmp->nbr < (*stack)->nbr) && (tmp->nbr > ptr->nbr) \
 			&& ((*stack)->nbr > ptr->nbr))
 	{
 		swap_a(stack);
-		reverse_rotate_a(stack, count);
+		reverse_rotate_a(stack);
 	}
 }

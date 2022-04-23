@@ -27,7 +27,7 @@ static void	push_to_a(t_node **stack_a, t_node **stack_b, int *count, int index)
 				if ((find_index(*stack_b, var.tmp->nbr)) <= (*count / 2))
 					rotate_b(stack_b);
 				else
-					reverse_rotate_b(stack_b, count);
+					reverse_rotate_b(stack_b);
 			}
 			push_a(stack_a, stack_b);
 			var.tmp = *stack_b;
